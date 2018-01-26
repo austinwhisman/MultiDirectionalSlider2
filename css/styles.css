@@ -1,0 +1,449 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+}
+
+.content-wrapper{
+ position: relative;
+ top: 120px;
+ width: 100%;
+ bottom: 0;
+}
+
+.content{
+ width: 90%;
+ position: relative;
+ margin: 5%;
+ color: black;
+ font-size: 22px;
+ 
+}
+
+@-webkit-keyframes textFade {
+   
+    50%{color: #f33b3b;}
+    100%{color:black;}
+}
+@-moz-keyframes AnimationName {
+    50%{color: #f33b3b;}
+    100%{color:black;}
+}
+@keyframes AnimationName {
+   50%{color: #f33b3b;}
+    100%{color:black;}
+}
+
+.content p {
+  padding: 10%;
+  line-height: 1.5;
+}
+
+.ps {
+  font-size: 45px;
+  line-height: 3;
+  -webkit-animation: textFade 1s ease;
+  -moz-animation: textFade 1s ease;
+  animation: textFade 1s ease;
+}
+
+#c2 {
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(178deg, #ffffff, #f33b3b, #81f8ff);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 17s ease infinite;
+  -moz-animation: AnimationName 17s ease infinite;
+  animation: AnimationName 17s ease infinite;
+  position: absolute;
+  top: 10px;
+  transform: rotate(-45deg);
+  z-index: -1;
+  left: -350px;
+  margin: 0;
+}
+
+
+ 
+@-webkit-keyframes AnimationName {
+    0%{background-position:43% 0%}
+    50%{background-position:58% 100%}
+    100%{background-position:43% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:43% 0%}
+    50%{background-position:58% 100%}
+    100%{background-position:43% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:43% 0%}
+    50%{background-position:58% 100%}
+    100%{background-position:43% 0%}
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #c02e2e;
+  margin: auto;
+  z-index: 1999;
+}
+
+header > section {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  z-index: 2000;
+  -webkit-transition: -webkit-transform 550ms ease-in-out;
+  transition: transform 550ms ease-in-out;
+}
+
+header > section div {
+ width: 200px;
+ height: 5px;
+ background-color: #3f3534;
+ margin: 0;
+ -webkit-transition: -webkit-transform 550ms ease-in-out;
+ transition: transform 550ms ease-in-out;
+ z-index: 2001;
+}
+
+.clicked header > section {
+ -webkit-transform:translateY(32px);
+ transform:translateY(32px);
+}
+
+.clicked header > section div {
+  margin: 0;
+  border-radius: 0;   
+  background: #f009;
+
+}
+
+.clicked #menu-tag p {
+ display: none;
+}
+
+
+header > section:hover  div {
+  background: #ff2d2d;
+}
+
+#nav-menu {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  top: 100px;
+  background: rgba(24, 21, 24, 0.92);
+  z-index: 1000;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transition: all 550ms ease-in-out;
+}
+
+.clicked #nav-menu, .clicked .nav-list {
+ -webkit-transform: translateY(0%);
+ transform: translateY(0%);
+}
+
+.clicked header > section {
+  width: 200px;
+}
+
+.clicked header > section div {
+  width: 100%;
+}
+
+#menu-tag {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+
+#menu-tag p {
+  padding: 2px;
+}
+#nav-index {
+ float: right;
+ list-style: none;
+}
+
+.nav-list{
+  position: relative;
+  display: inline-block;
+  z-index: 1001;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transition: all 550ms ease-in-out;
+  font-family: helvetica;
+  color: #ffeded;
+}
+
+#nav-index, .nav-list, #nav-menu a {
+  cursor: pointer;
+}
+.nav-list:hover {
+ background: rgba(24, 21, 24, 1);
+}
+
+.clicked .nav-list {
+  padding: 10px 20px;
+
+}
+
+@media only screen and (max-width: 520px) {
+
+
+
+  .side-clicked #side-form { 
+    width: 100%;
+  }
+
+  .side-clicked #side-nav { 
+    left: -23px;
+  }
+  
+  form > div input {
+    padding: 0px !important;
+  }
+
+  .ps {
+    line-height: 2;
+  }
+.form-txt{
+  box-shadow: 0px -4px 0px -1px #dd5050 !important;
+}
+
+.form-txt:focus {
+ box-shadow: 0px -4px 0px -1px #befdff !important;
+}
+#message-wrapper {
+  width: 100%;
+}
+
+#message {
+  width: 80% !important;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+        #menu-tag p {
+         display: none;
+       }
+
+       header > section {
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        z-index: 2000;
+        -webkit-transition: -webkit-transform .4s ease-in-out;
+        transition: transform .4s ease-in-out;
+
+      }
+
+      header > section  div {
+       width: 35px;
+       height: 5px;
+       background-color:white;
+       margin: 6px 0;
+       border-radius: 4px;
+       -webkit-transition: -webkit-transform .4s ease-in-out;
+       transition: transform .4s ease-in-out;
+       z-index: 2001;
+      }
+
+      .clicked header > section {
+       -webkit-transform:translateY(65px);
+       transform:translateY(65px);
+      }
+
+      .clicked header > section div {
+        margin: 0;
+        border-radius: 0;
+        background: #594d4d99;   
+      }
+
+      .clicked header > section:hover div{
+        background: #f009;
+      } 
+      section {
+        overflow: hidden;
+      }
+
+      #nav-index {
+        width: 100%;
+      }
+
+      .nav-list, .clicked .nav-list {
+        top: 0;
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 14px 0;
+      }
+
+      #nav-menu {
+       height: 225px;
+      }
+
+      .clicked header > section div {
+        width: 100%;
+      }
+
+      .clicked header > section {
+        width: 90%;
+      }
+
+
+}
+
+#side-nav {
+  padding: 10px;
+  position: fixed;
+  left: -32px;
+  top: 45%;
+  height: 200px;
+  width: 20px;
+  background-color: #c02e2e;
+  border-radius: 4px;
+  z-index: 9000;
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+}
+
+#side-nav p {
+  transform: rotate(-90deg);
+  margin-top: 118px;
+  color: white;
+  padding: 10px;
+  z-index: 9001;
+}
+
+.side-clicked #side-nav p {
+  margin-top: 100px;
+}
+
+#side-nav:hover {
+ background-color: #ff2d2d;
+}
+
+#side-form {
+  min-height: 600px;
+  position: fixed;
+  height: 100%;
+  width: 500px;
+  background-color: #363535;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 8999;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+}
+
+.side-clicked #side-form {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.side-clicked #side-nav {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+form > div {
+  width: 80%;
+  margin:auto;
+}
+
+.form-txt{
+ width: 100%;
+ height: 30px;
+ font-size: 18px;
+ margin: 35px auto 0px auto;
+ padding: 10px;
+ font-weight: 100;
+ box-shadow: -13px 1px 0px -5px #dd5050;
+ border: 0px;
+}
+
+.form-txt:focus {
+ font-weight: 100;
+ box-shadow: -13px 1px 0px -5px #befdff;
+ 
+}
+
+#message {
+  width: 400px;
+  position: relative;
+  bottom: 35px;
+  height: 250px;
+}
+
+#message-wrapper {
+  position: absolute;
+  bottom: 20px;
+}
+/*
+      header > section {
+        position: absolute;
+        right: 20px;
+        top: 100px;
+        z-index: 2000;
+        -webkit-transition: -webkit-transform .4s ease-in-out;
+        transition: transform .4s ease-in-out;
+      }
+
+      header > section  div {
+       width: 35px;
+       height: 5px;
+       background-color:green;
+       margin: 6px 0;
+       border-radius: 4px;
+       -webkit-transition: -webkit-transform .4s ease-in-out;
+       transition: transform .4s ease-in-out;
+       z-index: 2001;
+      }
+
+      .clicked header > section {
+       -webkit-transform:translateY(65px);
+       transform:translateY(65px);
+      }
+
+      .clicked header > section div {
+        margin: 0;
+        border-radius: 0;   
+        background: #f009;
+
+      }
+      */
+      /*
+          header > section:hover  div:nth-child(1) {
+           -webkit-transform: rotate(45deg) scale(.3, .8) translate( 1px, 14px);
+           transform: rotate(45deg) scale(.3, .8) translate(1px, 14px);
+
+          }
+          header > section:hover div:nth-child(3) {
+            transform: rotate(-45deg) scale(0,.8);
+            -webkit-transform: rotate(-45deg) scale(.3, .8)translate( 1px, -14px);
+          }
+
+          header > section:hover div:nth-child(2) {
+           transform: translate(-19px, 0px) scale(.5, .5);
+          }
+
+          header > section:hover  div {
+            border-radius: 0;
+            background:aliceblue;
+          }
+          */
+
+
+
