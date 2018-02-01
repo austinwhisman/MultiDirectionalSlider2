@@ -17,6 +17,59 @@ h3 {
     margin: 20px;
     color:#b7faff;
 }
+/*
+            header {
+                position: fixed;
+                top: -2px;
+                width: 100%;
+                height: 100px;
+                background: #2ed3ff;
+                margin: auto;
+                z-index: 1999;
+            }
+
+            header > section {
+                position: fixed;
+                right: 20px;
+                top: 129px;
+                z-index: 2000;
+                -webkit-transition: -webkit-transform 550ms ease-in-out;
+                transition: transform 550ms ease-in-out;
+            }
+
+            header > section div {
+                width: 200px;
+                height: 5px;
+                background-color: #3f3534;
+                margin: 0;
+                -webkit-transition: -webkit-transform 550ms ease-in-out;
+                transition: transform 550ms ease-in-out;
+                z-index: 2001;
+            }
+
+            header > section:hover div {
+                background: #ff2d2d;
+            }
+
+
+            .clicked header > section {
+                -webkit-transform:translateY(32px);
+                transform:translateY(32px);
+                width: 200px;
+            }
+
+            .clicked header > section div {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;   
+                background: #f009;
+
+            }
+
+            .clicked header > section:hover div {
+                background: #ff2d2d;
+            }
+*/
 
 #about {
     color:white;
@@ -46,17 +99,17 @@ h3 {
     left: 45px;
     font-size: 16px;
     z-index: 5000;
-}
+ }
 
 
-#contact, #about {
+  #contact, #about {
     background: #671d95;
     padding: 3px;
-}
+  }
 
-.clicked #contact::before {
+ .clicked #contact::before {
     width: 120%;
-}
+ }
 
 #contact::before {
     position: absolute;
@@ -98,10 +151,10 @@ h3 {
     color: white;
 }
 
+
 .clicked #menu-tag p {
     display: none;
 }
-
 #nav-menu {
     position: fixed;
     height: 40px;
@@ -150,6 +203,7 @@ h3 {
 
 .clicked .nav-list {
     padding: 10px 20px;
+
 }
 
 #c2 {
@@ -161,7 +215,7 @@ h3 {
     -moz-animation: AnimationName 17s ease infinite;
     animation: AnimationName 17s ease infinite;
     position: absolute;
-    top: 0px;
+    top: 10px;
     transform: rotate(-45deg);
     z-index: 1;
     left: -427px;
@@ -195,7 +249,7 @@ h3 {
 
 .content {
     width: 90%;
-    position: absolute;
+    position: relative;
     padding: 5%;
     color: black;
     font-size: 22px;
@@ -203,7 +257,7 @@ h3 {
     flex-wrap: wrap;
 }
 
-.content-box {
+#content-box {
     position:  relative;
     max-width: 600px;
     width: 100%;
@@ -212,19 +266,18 @@ h3 {
     110px -40px rgba(86, 119, 119, 0.68),
     0px 5px 20px rgba(0, 0, 0, 0.1);
     z-index: 2;
-}
 
+}
 .content p {
     padding: 10%;
     line-height: 1.5;
     font-weight: 100;
     font-weight: 100;
-    position: relative;
+    position: absolute;
     width: 500px;
     font-weight: 100;
     top: -76px;
     left: -26px;
-    z-index: 6;
 }
 
 .content span {
@@ -234,6 +287,7 @@ h3 {
 .ps {
     font-size: 45px;
     line-height: 3;
+    
     -webkit-animation: textFade 1s ease;
     -moz-animation: textFade 1s ease;
     animation: textFade 1s ease;
@@ -241,6 +295,66 @@ h3 {
 
 #welcome {
     min-height: 45vh;
+}
+
+
+.c2content{
+    z-index: 6;
+    width: 50%;
+    text-align: left;
+    min-width: 375px;
+    width: 100%;
+    margin: 46px;
+    margin-right: 46px;
+    margin-bottom: 46px;
+    padding: 33px 5%;
+    text-align: center;
+    position: relative;
+    background: white;
+    box-shadow: 0px 0px 15px black;
+    margin-bottom: 20px;
+    margin-right: -2%;
+}
+
+#H {
+    height: 49px;
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    
+}
+/*
+     .c2content {
+    	z-index: 6;
+        width: 50%;
+        text-align: left;
+        min-width: 375px;
+        width: 19%;
+        margin: auto;
+        padding: 0 5%;
+        text-align: center;
+        position: relative;
+        background: white;
+        box-shadow: 0px 0px 15px black;
+        margin-bottom: 20px;
+        margin-right: -2%;
+    }
+*/
+.c2list {
+    margin: 8px 0;
+    display: inline-block;
+}
+
+#contenthunter {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url(img/hunter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    transform: translateX(0px);
 }
 
 #side-form {
@@ -262,6 +376,36 @@ h3 {
     transform: translateX(100%);
     -webkit-transition: -webkit-transform .4s ease-in-out;
     transition: transform .4s ease-in-out;
+}
+
+#side-nav {
+    padding: 10px;
+    position: fixed;
+    left: -32px;
+    top: 45%;
+    height: 200px;
+    width: 20px;
+    background-color: #2ed3ff99;
+    border-radius: 4px;
+    z-index: 9000;
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+}
+
+#side-nav:hover, .side-clicked #side-nav:hover {
+    background-color: #ff2d2d;
+}
+
+#side-nav p {
+    transform: rotate(-90deg);
+    margin-top: 118px;
+    color: white;
+    padding: 10px;
+    z-index: 9001;
+}
+
+.side-clicked #side-nav p {
+    margin-top: 100px;
 }
 
 .side-clicked #side-form {
@@ -373,13 +517,12 @@ form > div {
 
 } 
 @media only screen and (max-width: 680px) {
-
     #contact, #about {
         background: #671d95;
         padding: 3px;
     }
 
-    .side-clicked #contact {
+      .side-clicked #contact {
         left: 93%;
         z-index: 50000;
         background: none;
@@ -388,12 +531,11 @@ form > div {
         font-size: 21px;
     }
 
-    .side-clicked #contact::before {
+     .side-clicked #contact::before {
         background: none;
 
-    }
-
 }
+
 @media only screen and (max-width: 560px) {
 
     .content-wrapper {
@@ -408,21 +550,16 @@ form > div {
     #message-wrapper {
         width: 80%;
     }
-
     #message {
         width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 500px) {
-
     #content-box {
         top:40px;
     }
-
     .ps {
         font-size: 27px;
     }
-
 }
