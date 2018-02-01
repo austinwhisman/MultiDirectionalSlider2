@@ -1,7 +1,7 @@
-var menu = document.getElementById('menu'),
-	sideMenu = document.getElementById('side-nav'),
+/*var menu = document.getElementById('menu'),*/
+	var sideMenu = document.getElementById('contact'),
 		navMenuIn = document.querySelector('body');
-
+/*
 menu.onclick = function(){
 
 	if(navMenuIn.classList.contains('clicked')){
@@ -12,14 +12,31 @@ menu.onclick = function(){
 
   }
 }
-
+*/
 sideMenu.onclick = function(){
-
+ var w;
+if(window.attachEvent) {
+    window.attachEvent('onresize', function() {
+        w = window.innerWidth;
+    });
+}
+else if(window.addEventListener) {
+    window.addEventListener('resize', function() {
+        w = window.innerWidth;
+    }, true);
+}
 	if(navMenuIn.classList.contains('side-clicked')){
 	navMenuIn.classList.remove("side-clicked");
 	sideMenu.innerHTML = "<p>CONTACT</p>" 
 	} else{
   navMenuIn.classList.add("side-clicked");
-  sideMenu.innerHTML = "<p>CLOSE</p>"
+
+  if (w > 680) {
+  sideMenu.innerHTML = "CLOSE"
+	} else {
+	sideMenu.innerHTML = "X"
+	}
   }
 }
+
+
