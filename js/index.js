@@ -1,4 +1,5 @@
 var sideMenu = document.getElementById('contact'),
+	about = document.getElementById('about')
 navMenuIn = document.querySelector('body');
 
 sideMenu.onclick = function(){
@@ -12,4 +13,12 @@ sideMenu.onclick = function(){
 	}
 }
 
+about.onclick = function() {
 
+	if(navMenuIn.classList.contains('about-clicked')){
+		navMenuIn.classList.remove("about-clicked");
+	} else{
+		navMenuIn.classList.add("about-clicked");
+		
+	}
+}
