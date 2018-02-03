@@ -25,6 +25,7 @@ h3 {
     z-index: 1;
     width: 109px;
 }
+
 #about {
     color:white;
     position:absolute;
@@ -34,6 +35,7 @@ h3 {
     z-index: 5000;
 
 }
+
 #about::before {
     position: absolute;
     top: 5px;
@@ -42,6 +44,9 @@ h3 {
     width: 45%;
     z-index: -1;
     height: 20px;
+    -webkit-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -moz-transition: 100ms linear;
     transition: 100ms linear;
 
 }
@@ -73,33 +78,133 @@ h3 {
     width: 45%;
     z-index: -1;
     height: 20px;
+    -webkit-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -moz-transition: 100ms linear;
     transition: 100ms linear;
 }
 
+#contact-form {
+    background: #1f231fe6;
+    position: relative;
+    top: 0;
+    transform: translate(0%, -300%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
+
+}
+
 #two {
+    background: url(img/presley.jpg);
+    background-position: fixed;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     top: 0;
     transform: translate(100%, -100%);
-    transition: 500ms linear;
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
 
 }
+
 .about-clicked #two {
+    -webkit-transform: translate(0%, -100%);
+    -moz-transform: translate(0%, -100%);
+    -o-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
-    transition: 500ms ease-in-out;
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
 } 
 
 .about-clicked #welcome {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: 500ms ease-in-out;
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
 }
 
+.about-clicked #contact-form {
+    -webkit-transform: translate(0%, -300%);
+    -moz-transform: translate(0%, -300%);
+    -o-transform: translate(0%, -300%);
+    transform: translate(0%, -300%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
+
+}
+
+.side-clicked #contact-form {
+    -webkit-transform: translate(0%, -200%);
+    -moz-transform: translate(0%, -200%);
+    -o-transform: translate(0%, -200%);
+    transform: translate(0%, -200%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
+}
+
+.side-clicked #welcome {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
+}
+
+.side-clicked #two {
+    -webkit-transform: translate(100%, -100%);
+    -moz-transform: translate(100%, -100%);
+    -o-transform: translate(100%, -100%);
+    transform: translate(100%, -100%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
+
+}
+
+.about-clicked #about, .about-clicked #about::before {
+    background: red;
+}
+
+.side-clicked #contact, .side-clicked #contact::before  {
+    background: red;
+}
+
+.side-clicked #logo {
+    z-index: 0;
+}
 #about:hover {
     cursor: default;
+    -webkit-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -moz-transition: 100ms linear;
     transition: all 100ms linear;
 }
 
 #about:hover::before {
     content:' ';
+    -webkit-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -moz-transition: 100ms linear;
     transition: all 100ms linear;
     width: 130%;
     height: 20px;
@@ -107,6 +212,9 @@ h3 {
 
 #contact:hover::before {
     content:' ';
+    -webkit-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -moz-transition: 100ms linear;
     transition: all 100ms linear;
     width: 130%;
     height: 20px;
@@ -133,8 +241,14 @@ h3 {
     top: 129px;
     background: rgba(24, 21, 24, 0.92);
     z-index: 1000;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
+    -webkit-transition: all 550ms ease-in-out;
+    -moz-transition: all 550ms ease-in-out;
+    -o-transition: all 550ms ease-in-out;
     transition: all 550ms ease-in-out;
 }
 
@@ -147,8 +261,13 @@ h3 {
     position: relative;
     display: inline-block;
     z-index: 1001;
-    transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
     transition: all 550ms ease-in-out;
     font-family: helvetica;
 }
@@ -169,6 +288,8 @@ h3 {
 
 .clicked #nav-menu, .clicked .nav-list {
     -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
     transform: translateY(0%);
 }
 
@@ -183,9 +304,13 @@ h3 {
     background-size: 600% 600%;
     -webkit-animation: AnimationName 17s ease infinite;
     -moz-animation: AnimationName 17s ease infinite;
+    -o-animation: AnimationName 17s ease infinite;
     animation: AnimationName 17s ease infinite;
     position: absolute;
     top: 0px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
     left: -427px;
     margin: 0;
@@ -210,6 +335,9 @@ h3 {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     box-shadow: 0px 2px 93px 66px black;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -240,16 +368,21 @@ h3 {
     overflow: auto;
     margin-right: 14px;
     padding-right: 28px;
+    top:70px;
 
+}
+
+.side-clicked #content-box {
+    top:0px;
 }
 
 .hide-scrollbar {
-     overflow: hidden;
-     font-size: 22px;
+   overflow: hidden;
+   font-size: 22px;
 }
 
 .hide-scrollbar p {
-    padding: 10%;
+    padding: 1% 10%;
     line-height: 1.5;
     font-weight: 100;
     font-weight: 100;
@@ -270,13 +403,20 @@ h3 {
     line-height: 3;
     -webkit-animation: textFade 1s ease;
     -moz-animation: textFade 1s ease;
+    -o-animation: textFade 1s ease;
     animation: textFade 1s ease;
 }
 
 #welcome {
     min-height: 45vh;
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-    transition: 500ms ease-in-out;
+    -webkit-transition: 550ms linear;
+    -o-transition: 550ms linear;
+    -moz-transition: 550ms linear;
+    transition: 550ms linear;
 }
 
 #side-form {
@@ -295,20 +435,28 @@ h3 {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transform: translateX(100%);
     -webkit-transition: -webkit-transform .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out;
+    -o-transition: transform .4s ease-in-out;
     transition: transform .4s ease-in-out;
 }
 
 .side-clicked #side-form {
     box-shadow: -9px 8px 37px #343333;
     -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
     transform: translateX(0%);
 }
 
 .side-clicked #side-nav {
     background-color: #2ed3ff;
     -webkit-transform: translateX(12px);
+    -moz-transform: translateX(12px);
+    -o-transform: translateX(12px);
     transform: translateX(12px);
 }
 
@@ -333,12 +481,12 @@ form > div {
 }
 
 #message-wrapper {
+    width: 80%;
     position: absolute;
     bottom: 20px;
 }
 
 #message {
-    width: 400px;
     position: relative;
     bottom: 35px;
     height: 250px;
@@ -387,12 +535,27 @@ form > div {
         width: 100%;
         height: 100%;
         border: 0px;
+        overflow: hidden;
     }
 
+    .hide-scrollbar p {
+        width: 80%;
+    }
+
+    #contact, #about {
+        position: absolute;
+    }
+
+    #about {
+        top: 60px;
+    }
     #contact {
-        top: 40px;
-        left: 130px;
-        transition: 100ms linear;
+        top: 60px;
+        left: 150px;
+        -webkit-transition: 150ms linear;
+        -moz-transition: 150ms linear;
+        -o-transition: 150ms linear;
+        transition: 150ms linear;
     }
 
     .content-box {
@@ -408,6 +571,7 @@ form > div {
     }
 
 } 
+
 @media only screen and (max-width: 680px) {
     #logo {
         z-index: 0;
@@ -417,28 +581,17 @@ form > div {
         padding: 3px;
     }
 
-    .side-clicked #contact {
-        left: 93%;
-        z-index: 50000;
-        background: none;
-        top: 26px;
-        font-family: arial;
-        font-size: 21px;
-    }
-
-    .side-clicked #contact::before {
-        background: none;
-
-    }
-    .hide-scrollbar p {
-        width: 80%;
-    }
-
 }
+
 @media only screen and (max-width: 560px) {
 
     .content-wrapper {
-        overflow: auto;
+        overflow: hidden;
+    }
+
+    .about-clicked .content-wrapper, 
+    .side-clicked .content-wrapper {
+        overflow: hidden;
     }
 
     #side-form {
@@ -459,13 +612,25 @@ form > div {
 @media only screen and (max-width: 500px) {
 
     #content-box {
-        top:40px;
+        top: 0px !important;
         margin-right: 0px;
-         padding-right: 0px;
+        padding-right: 0px;
+    }
+
+    .hide-scrollbar p {
+        top: 70px;
     }
 
     .ps {
         font-size: 27px;
     }
 
+}
+
+
+@media only screen and (min-width:720px) and (max-width: 1115px) {
+
+        .hide-scrollbar p {
+        width: 60%;
+    }
 }
