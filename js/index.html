@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+
+	body {
+		background: url(../css/img/backgroundgrey2.png);
+		background-position: fixed;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#content-wrapper {
+		width: 600px;
+		height: 600px;
+		overflow: hidden; border: 13px solid black;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		box-shadow: 0px 2px 93px 66px black;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox */
+		box-sizing: border-box; 
+		overflow: hidden;
+	}
+	#contentHolder {
+		width: 100%;
+	}
+
+	#content-box {
+		position:  relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0px 80px 
+		110px -40px rgba(86, 119, 119, 0.68),
+		0px 5px 20px rgba(0, 0, 0, 0.1);
+		z-index: 2;
+		overflow: auto;
+		margin-right: 14px;
+		padding-right: 28px;
+		top:70px;
+
+	}
+
+	.hide-scrollbar {
+		overflow: hidden;
+		font-size: 22px;
+
+	}
+
+	#Welcome {
+		width: 100%;
+		height: 600px;
+		min-height: 600px;
+		
+		background: green;
+		-moz-transition: all 1s ease-in-out;
+		-webkit-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	}
+
+	#Contact {
+		width: 100%;
+		height: 600px;
+		min-height: 600px;
+		
+		background: red;
+		-moz-transition: all 1s ease-in-out;
+		-webkit-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	}
+
+	#About {
+		width: 100%;
+		height: 600px;
+		min-height: 600px;
+		background: yellow;
+		transform: translate(100%, -200%);
+		-moz-transition: all 1s ease-in-out;
+		-webkit-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	}
+
+</style>
+</head>
+<body>
+	<div id= "content-wrapper">
+		<div id ="contentHolder" class="hide-scrollbar">
+			<div class="content-box"  id="Welcome">
+			</div>
+
+			<div class="content-box" id="Contact">
+			</div>
+		</div>
+		<div class="hide-scrollbar" id= "About">
+			<div class="content-box">
+
+			</div>
+		</div>
+	</div>
+	<button id="clickMe1">click1</button>
+	<button id="clickMe2">click2</button>
+	
+
+	<script type="text/javascript">
+		var click1 = document.getElementById('clickMe1'),
+		click2 = document.getElementById('clickMe2'),
+		Welcome = document.getElementById('Welcome'),
+		Contact = document.getElementById('Contact'),
+		About = document.getElementById('About'),
+		wrapper = document.querySelector('body');
+
+		click1.onclick = function() {
+			setTimeout( function(){
+				if (wrapper.classList.contains('side-clicked')) {
+					AboutDefault();
+					click2.onclick.stopPropagation();
+				} else if (!wrapper.classList.contains('side-clicked') && wrapper.classList.contains('above-clicked')) {
+					ContactDefault();
+					 AboutActive();
+					 click2.onclick.stopPropagation();
+				} else {
+					AboutActive();
+					click2.onclick.stopPropagation();
+				}
+
+			}, 50);
+		}
+
+		click2.onclick = function() {
+
+			setTimeout(function(){
+				if (wrapper.classList.contains('above-clicked')) {
+					ContactDefault();
+					click2.onclick.stopPropagation();
+				} else if (!wrapper.classList.contains('above-clicked') && wrapper.classList.contains('side-clicked') ) {
+					AboutDefault();
+					ContactActive();
+					click2.onclick.stopPropagation();
+				}else {
+					ContactActive();
+					click2.onclick.stopPropagation();
+				}
+
+			}, 50);
+		}
+
+
+		function AboutDefault() {
+			wrapper.classList.remove("side-clicked");
+			About.style.webkitTransform = 'translate(100%, -200%)';
+			About.style.MozTransform = 'translate(100%, -200%)';
+			About.style.transform = 'translate(100%, -200%)';
+		}
+
+		function AboutActive() {
+			wrapper.classList.add("side-clicked");
+			About.style.webkitTransform = 'translate(0%, -200%)';
+			About.style.MozTransform = 'translate(0%, -200%)';
+			About.style.transform = 'translate(0%, -200%)';
+		}
+
+		function ContactDefault(){
+			wrapper.classList.remove("above-clicked");
+			Contact.style.webkitTransform = 'translateY(0%)';
+			Contact.style.MozTransform = 'translateY(0%)';
+			Contact.style.transform = 'translateY(0%)';
+		}
+
+		function ContactActive(){
+			wrapper.classList.add("above-clicked");
+			Contact.style.webkitTransform = 'translateY(-100%)';
+			Contact.style.MozTransform = 'translateY(-100%)';
+			Contact.style.transform = 'translateY(-100%)';
+		}
+
+		
+
+	</script>
+</body>
+</html>

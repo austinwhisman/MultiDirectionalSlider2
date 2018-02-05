@@ -3,6 +3,7 @@ var sideMenu = document.getElementById('contact'),
 navMenuIn = document.querySelector('body');
 
 sideMenu.onclick = function(){
+	setTimeout(function(){
 	var myDiv = document.getElementById('two');
 	myDiv.scrollTop = 0;
 	myDiv = document.getElementById('welcome');
@@ -15,9 +16,9 @@ sideMenu.onclick = function(){
 		navMenuIn.classList.add("side-clicked");
 	}
 }
-
+, 75)}
 about.onclick = function() {
-
+setTimeout(function(){
 	var myDiv = document.getElementById('two');
 	myDiv.scrollTop = 0;
 	myDiv = document.getElementById('welcome');
@@ -30,4 +31,4 @@ about.onclick = function() {
 
 		
 	}
-}
+}, 75)}
