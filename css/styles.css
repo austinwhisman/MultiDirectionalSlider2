@@ -31,13 +31,13 @@ h3 {
     color:white;
     position:absolute;
     top: 40px;
-    left: 45px;
+    right: 140px;
     font-size: 16px;
     z-index: 5000;
 
 }
 
-#about::before {
+#about::before, #contact::before {
     position: absolute;
     top: 5px;
     content: ' ';
@@ -56,7 +56,7 @@ h3 {
     color:white;
     position:absolute;
     top: 80px;
-    left: 45px;
+    right: 140px;
     font-size: 16px;
     z-index: 5000;
 }
@@ -71,19 +71,7 @@ h3 {
     width: 120%;
 }
 
-#contact::before {
-    position: absolute;
-    top: 5px;
-    content: ' ';
-    background: #671d95;
-    width: 45%;
-    z-index: -1;
-    height: 20px;
-    -webkit-transition: 100ms linear;
-    -o-transition: 100ms linear;
-    -moz-transition: 100ms linear;
-    transition: 100ms linear;
-}
+
 
 #contact-form {
     background: #1f231fe6;
@@ -300,7 +288,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 80%;
-    height: 94vh;
+    height: 95vh;
     margin: auto;
     border: 13px solid black;
     position: absolute;
@@ -331,7 +319,7 @@ h3 {
 #content-box {
     position:  relative;
     width: 100%;
-    height: 100%;
+    height: 105%;
     box-shadow: 0px 80px 
     110px -40px rgba(86, 119, 119, 0.68),
     0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -339,7 +327,7 @@ h3 {
     overflow: auto;
     margin-right: 14px;
     padding-right: 28px;
-    top:70px;
+    
 
 }
 
@@ -450,15 +438,7 @@ form > div {
     font-weight: 100;
     box-shadow: -13px 1px 0px -5px #befdff;
 }
-/*
-#message-wrapper {
-    width: 100%;
-    height: 40%;
-    position: absolute;
-    bottom: 20px;
-    margin: 20% auto;
-}
-*/
+
 #message {
     position: relative;
     height: 250px;
@@ -515,27 +495,22 @@ form > div {
         width: 80%;
     }
 
-    #contact, #about {
-        position: absolute;
+    .ps {
+        line-height: 8;
     }
-
-    #about {
-        top: 60px;
+   
+    #about, #contact {
+        top: 20px;
     }
     #contact {
-        top: 60px;
-        left: 150px;
+        right: 30px;
         -webkit-transition: 150ms linear;
         -moz-transition: 150ms linear;
         -o-transition: 150ms linear;
         transition: 150ms linear;
     }
 
-    .content-box {
-        margin: auto;
-    }
-
-    .content p {
+   .content p {
         width: 100%;
         position: relative;
         top: 0px;
@@ -558,28 +533,10 @@ form > div {
 
 @media only screen and (max-width: 560px) {
 
-    .content-wrapper {
-        overflow: hidden;
-    }
-
-    .about-clicked .content-wrapper, 
-    .side-clicked .content-wrapper {
-        overflow: hidden;
-    }
-
-    #side-form {
+   #side-form {
         width: 100%;
 
     }
-
-    #message-wrapper {
-        width: 80%;
-    }
-
-    #message {
-        width: 100%;
-    }
-
 }
 
 @media only screen and (max-width: 500px) {
@@ -588,10 +545,6 @@ form > div {
         top: 0px !important;
         margin-right: 0px;
         padding-right: 0px;
-    }
-
-    .hide-scrollbar p {
-        top: 70px;
     }
 
     .ps {
