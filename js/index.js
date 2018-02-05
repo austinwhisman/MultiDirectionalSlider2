@@ -2,6 +2,7 @@ var sideMenu = document.getElementById('contact'),
 	about = document.getElementById('about')
 navMenuIn = document.querySelector('body');
 
+
 sideMenu.onclick = function(){
 	setTimeout(function(){
 	var myDiv = document.getElementById('two');

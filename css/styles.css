@@ -90,10 +90,10 @@ h3 {
     position: relative;
     top: 0;
     transform: translate(0%, -300%);
-    -webkit-transition: 550ms linear;
-    -o-transition: 550ms linear;
-    -moz-transition: 550ms linear;
-    transition: 550ms linear;
+    -webkit-transition: 1550ms linear;
+    -o-transition: 1550ms linear;
+    -moz-transition: 1550ms linear;
+    transition: 1550ms linear;
 
 }
 
@@ -103,10 +103,10 @@ h3 {
     -moz-transform: translate(100%, -100%);
     -o-transform: translate(100%, -100%);
     transform: translate(100%, -100%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 
 }
 
@@ -115,10 +115,10 @@ h3 {
     -moz-transform: translate(0%, -100%);
     -o-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 } 
 
 .about-clicked #welcome {
@@ -126,33 +126,21 @@ h3 {
     -moz-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 }
-/*
-.about-clicked #contact-form {
-    -webkit-transform: translate(0%, -300%);
-    -moz-transform: translate(0%, -300%);
-    -o-transform: translate(0%, -300%);
-    transform: translate(0%, -300%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
 
-}
-*/
 .side-clicked #contact-form {
     -webkit-transform: translate(0%, -200%);
     -moz-transform: translate(0%, -200%);
     -o-transform: translate(0%, -200%);
     transform: translate(0%, -200%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 }
 
 .side-clicked #welcome {
@@ -160,24 +148,12 @@ h3 {
     -moz-transform: translateY(100%);
     -o-transform: translateY(100%);
     transform: translateY(100%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 }
-/*
-.side-clicked #two {
-    -webkit-transform: translate(0%, -100%);
-    -moz-transform: translate(0%, -100%);
-    -o-transform: translate(0%, -100%);
-    transform: translate(0%, -100%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
 
-}
-*/
 .about-clicked #about, .about-clicked #about::before {
     background: red;
 }
@@ -243,10 +219,10 @@ h3 {
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
-    -webkit-transition: all 550ms ease-in-out;
-    -moz-transition: all 550ms ease-in-out;
-    -o-transition: all 550ms ease-in-out;
-    transition: all 550ms ease-in-out;
+    -webkit-transition: all 1550ms ease-in-out;
+    -moz-transition: all 1550ms ease-in-out;
+    -o-transition: all 1550ms ease-in-out;
+    transition: all 1550ms ease-in-out;
 }
 
 #nav-index {
@@ -262,10 +238,10 @@ h3 {
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
-    -webkit-transition: 550ms linear;
-    -o-transition: 550ms linear;
-    -moz-transition: 550ms linear;
-    transition: all 550ms ease-in-out;
+    -webkit-transition: 1550ms linear;
+    -o-transition: 1550ms linear;
+    -moz-transition: 1550ms linear;
+    transition: all 1550ms ease-in-out;
     font-family: helvetica;
 }
 
@@ -319,8 +295,6 @@ h3 {
     background-attachment: scroll;
     background-position-x: 0%;
     background-position-y: 0%;
-    background-size: auto auto;
-    background-position: fixed;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -410,10 +384,10 @@ h3 {
     -moz-transform: translate(0%, 0%);
     -o-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-    -webkit-transition: 550ms ease-in-out;
-    -o-transition: 550ms ease-in-out;
-    -moz-transition: 550ms ease-in-out;
-    transition: 550ms ease-in-out;
+    -webkit-transition: 1550ms ease-in-out;
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 }
 
 #side-form {
