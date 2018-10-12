@@ -1,7 +1,7 @@
  * {
     padding: 0;
     margin: 0;
-    font-family: courier;
+    font-family: 'K2D', sans-serif;
     cursor: url(img/asset.png), default; 
 }
 
@@ -31,9 +31,16 @@ h3 {
     color:white;
     position:absolute;
     top: 40px;
-    right: 140px;
+    right: 9%;
     font-size: 16px;
     z-index: 5000;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 
 }
 
@@ -41,7 +48,7 @@ h3 {
     position: absolute;
     top: 5px;
     content: ' ';
-    background: #671d95;
+    background: #67597a;
     width: 45%;
     z-index: -1;
     height: 20px;
@@ -56,14 +63,21 @@ h3 {
     color:white;
     position:absolute;
     top: 80px;
-    right: 140px;
+    right: 9%;
     font-size: 16px;
     z-index: 5000;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 
 #contact, #about {
-    background: #671d95;
+    background: #67597a;
     padding: 3px;
 }
 
@@ -78,19 +92,19 @@ h3 {
     position: relative;
     top: 0;
     transform: translate(0%, -300%);
-    -webkit-transition: 1550ms linear;
-    -o-transition: 1550ms linear;
-    -moz-transition: 1550ms linear;
-    transition: 1550ms linear;
+    -webkit-transition: 1550ms ease-in-out
+    -o-transition: 1550ms ease-in-out;
+    -moz-transition: 1550ms ease-in-out;
+    transition: 1550ms ease-in-out;
 
 }
 
 #two {
     top: 0;
-    -webkit-transform: translate(100%, -100%);
-    -moz-transform: translate(100%, -100%);
-    -o-transform: translate(100%, -100%);
-    transform: translate(100%, -100%);
+    -webkit-transform: translate(-100%, -100%);
+    -moz-transform: translate(-100%, -100%);
+    -o-transform: translate(-100%, -100%);
+    transform: translate(-100%, -100%);
     -webkit-transition: 1550ms ease-in-out;
     -o-transition: 1550ms ease-in-out;
     -moz-transition: 1550ms ease-in-out;
@@ -110,10 +124,10 @@ h3 {
 } 
 
 .about-clicked #welcome {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
     -webkit-transition: 1550ms ease-in-out;
     -o-transition: 1550ms ease-in-out;
     -moz-transition: 1550ms ease-in-out;
@@ -143,16 +157,13 @@ h3 {
 }
 
 .about-clicked #about, .about-clicked #about::before {
-    background: red;
+    background: #bb4430;
 }
 
 .side-clicked #contact, .side-clicked #contact::before  {
-    background: red;
+    background: #bb4430;
 }
 
-.side-clicked #logo {
-    z-index: 0;
-}
 #about:hover {
     cursor: default;
     -webkit-transition: 100ms linear;
@@ -230,7 +241,7 @@ h3 {
     -o-transition: 1550ms linear;
     -moz-transition: 1550ms linear;
     transition: all 1550ms ease-in-out;
-    font-family: helvetica;
+    font-family: 'K2D', sans-serif;
 }
 
 
@@ -261,7 +272,7 @@ h3 {
 #c2 {
     height: 400px;
     width: 100%;
-    background: linear-gradient(178deg, #ffffff, #f33b3b, #81f8ff);
+    background: linear-gradient(178deg, #ffffff, #bb4430, #6a8eae);
     background-size: 600% 600%;
     -webkit-animation: AnimationName 17s ease infinite;
     -moz-animation: AnimationName 17s ease infinite;
@@ -340,22 +351,33 @@ h3 {
    font-size: 22px;
 }
 
+
 .hide-scrollbar p {
     padding: 1% 10%;
     line-height: 1.5;
     font-weight: 100;
     font-weight: 100;
     position: relative;
-    width: 50%;
     font-weight: 100;
+    z-index: 6;
+    top: 50%;
+}
+
+#two p {
+    padding: 1% 10%;
+    line-height: 1.5;
+    font-weight: 100;
+    position: relative;
+    width: 50%;
     top: -36px;
     left: -26px;
     z-index: 6;
+    background: #0029;
+    color: white;
+    transition: 1s;
 }
 
-.hide-scrollbar span {
-    background-color: #A9DEFF;
-}
+
 
 .ps {
     font-size: 45px;
@@ -482,6 +504,70 @@ form > div {
 }
 
 
+#WelcomeDiv {
+  background:black;
+  height:100%;
+  width:100%;
+  position: relative;
+  top:0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  animation-name: example3;
+  animation-delay: 3s;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  z-index: 100000;
+ }
+#WelcomeDiv p {
+  font-size: 50px;
+  color: white;
+  animation-name: example;
+  animation-duration: 3s;
+  opacity:1;
+  animation-fill-mode: forwards;
+  transform: translateY(-50%);
+  position: relative;               /* 2 */
+   top: 50%;     
+                      /* 3 */
+   
+  
+}
+
+@keyframes example {
+    0%   {transform: translateX(-100%);}
+    75% {transform: translateX(50%); opacity: 1;}
+    100% { transform: translateX(50%); opacity: 0;}
+}
+
+@-moz-keyframes example {
+    0%   {transform: translateX(-100%);}
+    75% {transform: translateX(50%); opacity: 1;}
+    100% { transform: translateX(50%); opacity: 0;}
+}
+
+@-webkit-keyframes example {
+    0%   {transform: translateX(-100%);}
+    75% {transform: translateX(50%); opacity: 1;}
+    100% { transform: translateX(50%);  opacity: 0;}
+}
+
+@keyframes example3 {
+    95% {transform: translate(0%, 100%);}
+    100% {opacity: 0; width: 0%; height: 0%; transform: translate(-50%, -50%); left: 50%; top: 50%;}
+}
+
+
+@-moz-keyframes example3 {
+   95% {transform: translate(0%, 100%);}
+   100% {opacity: 0; width: 0%; height: 0%; transform: translate(-50%, -50%); left: 50%; top: 50%;}
+}
+
+@-webkit-keyframes example3 {
+   95% {transform: translate(0%, 100%);}
+   100% {opacity: 0; width: 0%; height: 0%; transform: translate(-50%, -50%); left: 50%; top: 50%;}
+}
 @media only screen and (max-width: 720px) {
 
     .content-wrapper {
@@ -494,6 +580,11 @@ form > div {
     .hide-scrollbar p {
         width: 80%;
     }
+       
+    #two p {
+        width: 55%;
+        transition: 1s;
+        }
 
     .ps {
         line-height: 8;
@@ -501,6 +592,10 @@ form > div {
    
     #about, #contact {
         top: 20px;
+    }
+
+    #about {
+        right: 140px;
     }
     #contact {
         right: 30px;
@@ -525,9 +620,10 @@ form > div {
         z-index: 0;
     }
     #contact, #about {
-        background: #671d95;
+        background: #67597a;
         padding: 3px;
     }
+    
 
 }
 
@@ -537,9 +633,13 @@ form > div {
         width: 100%;
 
     }
+
+    .hide-scrollbar {
+        font-size:17px;
+    }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 540px) {
 
     #content-box {
         top: 0px !important;
@@ -551,6 +651,17 @@ form > div {
         font-size: 27px;
     }
 
+    #WelcomeDiv p {
+  font-size: 20px;
+      }
+      #two p {
+        width: 73%;
+        transition: 1s;
+        }
+                      /* 3 */
+   
+  
+
 }
 
 
@@ -558,5 +669,6 @@ form > div {
 
         .hide-scrollbar p {
         width: 60%;
+        font-size: 20px;
     }
 }
